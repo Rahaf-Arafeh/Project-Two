@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="description" content="GAMAR Quiz for employment">
+  <meta name="keywords"
+    content="gamar,development,quiz,employment,company,html,css,bootstrap,wordpress,java,javascript,web,developer">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../assets/logo1.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="../css/shared-style.css">
+  <link rel="stylesheet" href="../css/quiz-style.css">
+  <title>Document</title>
+  <!-- sweet alert -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
+</head>
+
+<body onload=" checkIfLogged(); showLoggedUsername();buildMyQuiz();">
+  <header>
+    <nav>
+      <!-- Logo -->
+      <div class="logo-container">
+        <a href="../html/index.html">
+          <abbr title="Go To Home Page">
+            <img src="../assets/logo1.png" alt="logo">
+          </abbr>
+        </a>
+      </div>
+      <div class="logged-username-container">
+        <!-- User Welcome -->
+      </div>
+      <!-- Sign-in Sign up Buttons -->
+      <div class="navbar-buttons">
+        <button id="logoutButton" onclick="logout()">Logout</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main-container">
+    <div class="quiz-attempt">
+      <h2>You are currently attempting a quiz for posotion: <br><span>Front-end developer</span></h2>
+    </div>
+    <div class="quiz">
+      <div class="quiz-title-container">
+        <h3></h3>
+        <button id="report-a-problem-button" onclick="reportProblem()">Report a problem</button>
+      </div>
+
+      <input type="radio" id="answer1" name="qz" class="my-radio" value="a"></input>
+      <label for="answer1" id="label1"></label>
+      <br>
+      <input type="radio" id="answer2" name="qz" class="my-radio" value="b"></input>
+      <label for="answer2" id="label2"></label>
+      <br>
+      <input type="radio" id="answer3" name="qz" class="my-radio" value="c"></input>
+      <label for="answer3" id="label3"></label>
+      <br>
+      <input type="radio" id="answer4" name="qz" class="my-radio" value="d"></input>
+      <label for="answer4" id="label4"></label>
+      <br>
+      <button class="next quiz-button" onclick="showNextQuestion() ">Next</button>
+      <button class="quiz-button" id="submit-button" onclick="submitExamButton()">Submit</button>
+    </div>
+  </main>
+  <footer>
+    <div class="connect-with-us">
+      <a href="https://github.com/Mahdi-Suleiman/projectTwo-QuizWebsite" target="_blank"><i
+          class="fa-brands fa-linkedin-in"></i></a>
+      <a href="https://github.com/Mahdi-Suleiman/projectTwo-QuizWebsite" target="_blank"><i
+          class="fa-brands fa-github-alt"></i></a>
+      <a href="https://github.com/Mahdi-Suleiman/projectTwo-QuizWebsite" target="_blank"><i
+          class="fa-brands fa-twitter"></i></a>
+    </div>
+    <div class="copyright">
+      <p>Copyright ©2021 All rights reserved | This website is powered by</p>
+      <span><img src="../assets/logo1.png"></span>
+    </div>
+  </footer>
+  <script src="../json/questions.json"></script>
+  <script src="../javascript/shared-script.js"></script>
+  <script src="../javascript/quiz.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap%27');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,500&display=swap%27');
+:root {
+    --main-background-color: #1877F2;
+    --register-button-color: #51b33e;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 80vh;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* <Navbar> */
+
+nav {
+    background-color: var(--main-background-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 10vh;
+    filter: drop-shadow(0 0px 6px #1877F2);
+}
+
+/* nav a:active {
+    all: unset;
+} */
+
+nav a img {
+    width: 6em;
+    height: auto;
+    margin-left: 1em;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav a:hover {
+    filter: brightness(80%);
+}
+
+.navbar-buttons {
+    display: flex;
+    padding: 1em;
+    justify-content: flex-end;
+}
+
+.navbar-buttons button {
+    margin: 0 0.5em;
+    padding: 0.5em 1em;
+    border-radius: 0.3em;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    border: none;
+    background-color: var(--register-button-color);
+}
+
+/* </Navbar> */
+
+/* <buttons> */
+
+button:hover {
+    filter: brightness(80%);
+    cursor: pointer;
+}
+
+/* </buttons> */
+
+/* <input> */
+
+input {
+    transition: all 0.35s ease-in-out;
+}
+
+/* </input> */
+
+/* <Footer> */
+
+footer {
+    background-color: var(--main-background-color);
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    min-height: 10vh;
+    filter: drop-shadow(0 0px 6px #1877F2);
+}
+
+footer img {
+    width: 4em;
+    height: auto;
+}
+
+.connect-with-us {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    width: 50%;
+    justify-content: space-between;
+}
+
+.connect-with-us i {
+    transition: all 0.6s;
+    font-size: 2em;
+    margin: 0.5em auto;
+    color: white;
+}
+
+.connect-with-us i:hover {
+    filter: brightness(80%);
+    transform: rotate(360deg);
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-transform: capitalize;
+}
+
+/* </Footer> */
+
+/* <General> */
+
+.logged-username-container {
+    color: white;
+    font-weight: bold;
+    font-size: 1.3em;
+    text-align: center;
+}
+
+/* </General> */
+
+@media all and (max-width: 400px) {
+    .logged-username-container {
+        font-size: 1em;
+    }
+    .connect-with-us {
+        width: 70%;
+    }
+    nav a img {
+        width: 80px;
+        height: 40px;
+    }
+}

@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+:root {
+    --blue: #876ef5;
+    --black: #444;
+    --light-color: #777;
+    --box-shadow: .5em .5em 0 rgba(22, 160, 133, .2);
+    --text-shadow: .08em .08em 0 rgba(0, 0, 0, .2);
+    --border: .2em solid var(--green);
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .2s ease-out;
+    text-decoration: none;
+}
+
+section {
+    padding: 5em 5%;
+}
+
+.heading {
+    text-align: center;
+    padding-bottom: 0.2em;
+    text-shadow: var(--text-shadow);
+    text-transform: uppercase;
+    color: var(--black);
+    font-size: 3em;
+    letter-spacing: .4em;
+}
+
+.heading span {
+    text-transform: uppercase;
+    color: var(--blue);
+}
+
+.signin-button {
+    display: inline-block;
+    cursor: pointer;
+    background-color: #1877F2;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    margin-top: 20px;
+    width: 50%;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: white;
+}
+
+.home .content h3 {
+    font-size: 3em;
+    color: var(--black);
+    line-height: 1.8;
+    text-shadow: var(--text-shadow);
+}
+
+.home .content p {
+    font-size: 1.7em;
+    color: var(--light-color);
+    line-height: 1.8;
+    padding: 1em 0;
+}
+
+.about .row {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+}
+
+.image img {
+    width: 40em;
+    height: auto;
+}
+
+.about .row .content {
+    max-width: 31.25em;
+}
+
+.about .row .content h3 {
+    color: var(--black);
+    text-shadow: var(--text-shadow);
+    font-size: 4em;
+    line-height: 1.8;
+}
+
+.about .row .content p {
+    color: var(--light-color);
+    padding: 1em 0;
+    font-size: 1em;
+    line-height: 1.8;
+}
+
+@media all and (min-width: 481px) and (max-width: 768px) {
+    .about .row .content {
+        max-width: unset;
+        /* min-width: min-content; */
+    }
+}
+
+@media all and (max-width: 480px) {
+    .about .row .content h3 {
+        font-size: 2em;
+    }
+    .home .content h3 {
+        font-size: 2em;
+    }
+    .image img {
+        width: 20em;
+    }
+    .about .row .content {
+        max-width: unset;
+    }
+}

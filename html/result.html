@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="description" content="GAMAR Quiz for employment">
+    <meta name="keywords"
+        content="gamar,development,quiz,employment,company,html,css,bootstrap,wordpress,java,javascript,web,developer">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/shared-style.css">
+    <link rel="stylesheet" href="../css/result.css">
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@0.9.0/dist/js-confetti.browser.js"></script>
+</head>
+
+<body onload="buildAnwersArray(); showTable(); showLoggedUsername();">
+
+    <header>
+        <nav>
+            <!-- Logo -->
+            <div class="logo-container">
+                <a href="#">
+                    <abbr title="">
+                        <img src="../assets/logo1.png" alt="logo">
+                    </abbr>
+                </a>
+            </div>
+            <div class="logged-username-container">
+                <!-- User Welcome -->
+            </div>
+            <!-- Sign-in Sign up Buttons -->
+            <div class="navbar-buttons">
+                <button onclick="logout()">Logout</button>
+                <!-- <button>Sign out</button> -->
+            </div>
+        </nav>
+    </header>
+    <canvas id="custom_canvas"></canvas>
+    <!-- <button onclick="logout()">Logout</button> -->
+    </div>
+    <div class="main-section">
+        <h1 id="pass-fail-div"></h1>
+        <h4 id="results"></h4>
+
+        <button id="show-hide-button" onclick="toggleResult()">Show/Hide Result</button>
+        <div class="table-container">
+            <!-- <div id="answers-table"></div> -->
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="connect-with-us">
+            <a href="https://github.com/Mahdi-Suleiman/projectTwo-QuizWebsite" target="_blank"><i
+                    class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://github.com/Mahdi-Suleiman/projectTwo-QuizWebsite" target="_blank"><i
+                    class="fa-brands fa-github-alt"></i></a>
+            <a href="https://github.com/Mahdi-Suleiman/projectTwo-QuizWebsite" target="_blank"><i
+                    class="fa-brands fa-twitter"></i></a>
+        </div>
+        <div class="copyright">
+            <p>Copyright ©2021 All rights reserved | This website is powered by</p>
+            <span><img src="../assets/logo1.png"></span>
+        </div>
+    </footer>
+    <script src="../javascript/shared-script.js"></script>
+    <script src="../javascript/result-page.js"></script>
+</body>
+
+</html>
